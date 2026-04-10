@@ -5,28 +5,28 @@ export default function Home() {
   return (
     <div className="mx-auto max-w-3xl px-6">
       {/* Hero */}
-      <section className="pb-16 pt-24">
-        <div className="overflow-hidden rounded-2xl">
+      <section className="pb-16 pt-24 text-center">
+        <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">
+          Hey, I&apos;m Tysen.
+        </h1>
+        <div className="mx-auto mt-8 max-w-xs overflow-hidden rounded-2xl">
           <Image
             src="/headshot.jpg"
             alt="Tysen Meroniuk"
-            width={800}
-            height={500}
-            className="w-full rounded-2xl object-cover"
+            width={320}
+            height={400}
+            className="h-72 w-full rounded-2xl object-cover object-top sm:h-80"
             priority
           />
         </div>
-        <h1 className="mt-8 text-4xl font-bold tracking-tight sm:text-5xl">
-          Hey, I&apos;m Tysen.
-        </h1>
-        <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted">
+        <p className="mx-auto mt-8 max-w-xl text-lg leading-relaxed text-muted">
           Software engineer and founder building{" "}
           <span className="text-foreground font-medium">Field Ops</span> — an
           AI-native, offline-first platform digitizing field operations and
           compliance workflows for oil and gas operators. I care about clean
           design, thoughtful engineering, and shipping things that matter.
         </p>
-        <div className="mt-8 flex gap-4">
+        <div className="mt-8 flex justify-center gap-4">
           <Link
             href="/projects"
             className="inline-flex h-11 items-center rounded-full bg-accent px-6 text-sm font-medium text-background transition-opacity hover:opacity-80"
@@ -54,9 +54,12 @@ export default function Home() {
             <span className="text-foreground font-medium">
               Synovion Technologies
             </span>
-            , where we&apos;re building Field Ops — an AI-driven mobile platform
-            that helps oil and gas operators log tasks, capture voice notes, and
-            manage workflows entirely offline.
+            , where we&apos;re building Field Ops — the first AI copilot for
+            field operations. Operators speak naturally and our Ops CoPilot
+            handles the data entry, cutting 80% of manual work. We&apos;re
+            tackling a real problem: oil and gas field operations are decades
+            behind digitally, with 70% of digital pilots failing to gain
+            traction.
           </p>
           <p>
             I&apos;m passionate about system design, product engineering, and

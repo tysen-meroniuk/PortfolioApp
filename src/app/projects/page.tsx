@@ -12,8 +12,8 @@ const projects: Project[] = [
   {
     title: "Field Ops",
     description:
-      "An AI-native, offline-first mobile platform digitizing field operations for oil and gas. Built with on-device speech recognition (WhisperKit), GPT-powered summarization, and semantic search via NLEmbedding. Completed POC with CryptoTherm — 80% task autocompletion, 42% faster logs, and 73% speech-to-text reliability.",
-    tags: ["Swift", "SwiftUI", "WhisperKit", "GPT API", "Offline-First"],
+      "The first AI copilot for field operations. Operators speak naturally and Ops CoPilot auto-fills forms — cutting 80% of manual data entry. Built offline-first with on-device speech recognition (WhisperKit), GPT-powered summarization, semantic search via NLEmbedding, and smart document management. Validated on-site with CryptoTherm: 42% faster logs, 80% task autocompletion, and 73% speech-to-text reliability. Part of the broader Synovion OS vision connecting field data capture to enterprise compliance and production accounting.",
+    tags: ["Swift", "SwiftUI", "React Native", "WhisperKit", "GPT API", "Offline-First", "AI CoPilot"],
     href: "#",
     linkLabel: "Learn More",
   },
