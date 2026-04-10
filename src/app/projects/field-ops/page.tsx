@@ -38,6 +38,27 @@ export default function FieldOps() {
         <p className="mt-2 text-lg text-muted">
           The first AI copilot for field operations.
         </p>
+        <a
+          href="https://synovion.io"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-4 inline-flex items-center gap-1.5 text-sm font-medium text-foreground transition-opacity hover:opacity-70"
+        >
+          Visit Synovion.io
+          <svg
+            className="h-3.5 w-3.5"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={2}
+            stroke="currentColor"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"
+            />
+          </svg>
+        </a>
         <div className="mt-5 flex flex-wrap gap-2">
           {[
             "Swift",
@@ -65,15 +86,14 @@ export default function FieldOps() {
       {/* Cover image */}
       <section className="pb-16">
         <div className="overflow-hidden rounded-2xl border border-border/50">
-          <div className="relative aspect-[2/1] w-full bg-foreground/5">
-            <Image
-              src="/projects/field-ops-cover.png"
-              alt="Field Ops app preview"
-              fill
-              className="object-cover"
-              priority
-            />
-          </div>
+          <Image
+            src="/projects/field-ops-detail-cover.png"
+            alt="Field Ops app preview from Synovion.io"
+            width={800}
+            height={450}
+            className="w-full object-cover"
+            priority
+          />
         </div>
       </section>
 
@@ -371,7 +391,6 @@ export default function FieldOps() {
             "Teleo",
             "Burke Calibration",
             "B-Clouder",
-            "Astara Energy Corp.",
           ].map((partner) => (
             <span
               key={partner}

@@ -37,12 +37,13 @@ export default function Projects() {
         {projects.map((project) => (
           <Link key={project.slug} href={`/projects/${project.slug}`}>
             <article className="group overflow-hidden rounded-2xl border border-border/50 bg-card transition-all hover:border-border hover:shadow-md">
-              <div className="relative aspect-[16/9] w-full overflow-hidden bg-foreground/5">
+              <div className="flex aspect-[3/1] w-full items-center justify-center overflow-hidden bg-foreground/5">
                 <Image
                   src={project.image}
                   alt={project.title}
-                  fill
-                  className="object-cover transition-transform duration-300 group-hover:scale-[1.02]"
+                  width={120}
+                  height={120}
+                  className="object-contain transition-transform duration-300 group-hover:scale-[1.05]"
                 />
               </div>
               <div className="p-6">
