@@ -12,8 +12,8 @@ const projects: Project[] = [
   {
     title: "Field Ops",
     description:
-      "A field service management platform built to help crews coordinate jobs, track progress, and stay organized. Born from real experience working in the field and seeing how much time gets wasted on bad tooling.",
-    tags: ["React", "Node.js", "PostgreSQL", "Product Engineering"],
+      "An AI-native, offline-first mobile platform digitizing field operations for oil and gas. Built with on-device speech recognition (WhisperKit), GPT-powered summarization, and semantic search via NLEmbedding. Completed POC with CryptoTherm — 80% task autocompletion, 42% faster logs, and 73% speech-to-text reliability.",
+    tags: ["Swift", "SwiftUI", "WhisperKit", "GPT API", "Offline-First"],
     href: "#",
     linkLabel: "Learn More",
   },

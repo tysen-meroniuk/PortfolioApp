@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export default function Home() {
@@ -5,7 +6,17 @@ export default function Home() {
     <div className="mx-auto max-w-3xl px-6">
       {/* Hero */}
       <section className="pb-16 pt-24">
-        <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">
+        <div className="overflow-hidden rounded-2xl">
+          <Image
+            src="/headshot.jpg"
+            alt="Tysen Meroniuk"
+            width={800}
+            height={500}
+            className="w-full rounded-2xl object-cover"
+            priority
+          />
+        </div>
+        <h1 className="mt-8 text-4xl font-bold tracking-tight sm:text-5xl">
           Hey, I&apos;m Tysen.
         </h1>
         <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted">
@@ -68,6 +79,7 @@ export default function Home() {
             "Python",
             "C",
             "Haskell",
+            "React Native",
             "SwiftUI",
             "Spring Boot",
             "PostgreSQL",
