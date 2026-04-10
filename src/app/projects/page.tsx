@@ -1,50 +1,61 @@
+import Image from "next/image";
 import Link from "next/link";
 
 interface Project {
   title: string;
+  subtitle: string;
   description: string;
   tags: string[];
-  href: string;
-  linkLabel: string;
+  slug: string;
+  image: string;
 }
 
 const projects: Project[] = [
   {
     title: "Field Ops",
+    subtitle: "AI Copilot for Field Operations",
     description:
-      "The first AI copilot for field operations. Operators speak naturally and Ops CoPilot auto-fills forms — cutting 80% of manual data entry. Built offline-first with on-device speech recognition (WhisperKit), GPT-powered summarization, semantic search via NLEmbedding, and smart document management. Validated on-site with CryptoTherm: 42% faster logs, 80% task autocompletion, and 73% speech-to-text reliability. Part of the broader Synovion OS vision connecting field data capture to enterprise compliance and production accounting.",
-    tags: ["Swift", "SwiftUI", "React Native", "WhisperKit", "GPT API", "Offline-First", "AI CoPilot"],
-    href: "#",
-    linkLabel: "Learn More",
+      "An offline-first mobile platform that lets oil field operators speak naturally while Ops CoPilot auto-fills forms, cutting 80% of manual data entry.",
+    tags: ["Swift", "SwiftUI", "React Native", "WhisperKit", "GPT API"],
+    slug: "field-ops",
+    image: "/projects/field-ops-cover.png",
   },
-  // Add more projects here as you build them
+  // Add more projects here
 ];
 
 export default function Projects() {
   return (
     <div className="mx-auto max-w-3xl px-6">
-      <section className="pb-16 pt-24">
+      <section className="pb-12 pt-24">
         <h1 className="text-4xl font-bold tracking-tight">Projects</h1>
         <p className="mt-4 text-lg text-muted">
-          Things I&apos;ve built — from startups to systems.
+          Things I&apos;ve built, from startups to systems.
         </p>
       </section>
 
-      <section className="space-y-6 pb-24">
+      <section className="space-y-8 pb-24">
         {projects.map((project) => (
-          <article
-            key={project.title}
-            className="group rounded-2xl border border-border/50 bg-card p-8 transition-all hover:border-border hover:shadow-sm"
-          >
-            <div className="flex items-start justify-between gap-4">
-              <div className="flex-1">
-                <h2 className="text-xl font-semibold tracking-tight">
+          <Link key={project.slug} href={`/projects/${project.slug}`}>
+            <article className="group overflow-hidden rounded-2xl border border-border/50 bg-card transition-all hover:border-border hover:shadow-md">
+              <div className="relative aspect-[16/9] w-full overflow-hidden bg-foreground/5">
+                <Image
+                  src={project.image}
+                  alt={project.title}
+                  fill
+                  className="object-cover transition-transform duration-300 group-hover:scale-[1.02]"
+                />
+              </div>
+              <div className="p-6">
+                <p className="text-xs font-medium uppercase tracking-widest text-muted">
+                  {project.subtitle}
+                </p>
+                <h2 className="mt-2 text-2xl font-semibold tracking-tight">
                   {project.title}
                 </h2>
                 <p className="mt-3 leading-relaxed text-muted">
                   {project.description}
                 </p>
-                <div className="mt-4 flex flex-wrap gap-2">
+                <div className="mt-5 flex flex-wrap gap-2">
                   {project.tags.map((tag) => (
                     <span
                       key={tag}
@@ -54,30 +65,25 @@ export default function Projects() {
                     </span>
                   ))}
                 </div>
+                <div className="mt-6 inline-flex items-center gap-1.5 text-sm font-medium text-foreground">
+                  View Project
+                  <svg
+                    className="h-4 w-4 transition-transform group-hover:translate-x-1"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth={2}
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"
+                    />
+                  </svg>
+                </div>
               </div>
-            </div>
-            <div className="mt-6">
-              <Link
-                href={project.href}
-                className="inline-flex items-center gap-1.5 text-sm font-medium text-foreground transition-opacity hover:opacity-70"
-              >
-                {project.linkLabel}
-                <svg
-                  className="h-4 w-4 transition-transform group-hover:translate-x-0.5"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth={2}
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"
-                  />
-                </svg>
-              </Link>
-            </div>
-          </article>
+            </article>
+          </Link>
         ))}
       </section>
     </div>

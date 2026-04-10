@@ -21,7 +21,7 @@ export default function Home() {
         </div>
         <p className="mx-auto mt-8 max-w-xl text-lg leading-relaxed text-muted">
           Software engineer and founder building{" "}
-          <span className="text-foreground font-medium">Field Ops</span> — an
+          <span className="text-foreground font-medium">Field Ops</span>, an
           AI-native, offline-first platform digitizing field operations and
           compliance workflows for oil and gas operators. I care about clean
           design, thoughtful engineering, and shipping things that matter.
@@ -54,7 +54,7 @@ export default function Home() {
             <span className="text-foreground font-medium">
               Synovion Technologies
             </span>
-            , where we&apos;re building Field Ops — the first AI copilot for
+            , where we&apos;re building Field Ops, the first AI copilot for
             field operations. Operators speak naturally and our Ops CoPilot
             handles the data entry, cutting 80% of manual work. We&apos;re
             tackling a real problem: oil and gas field operations are decades
@@ -62,10 +62,9 @@ export default function Home() {
             traction.
           </p>
           <p>
-            I&apos;m passionate about system design, product engineering, and
-            building software that solves real problems. When I&apos;m not
-            coding, you can find me working on the road crew or figuring out how
-            to make something work better.
+            I&apos;m passionate about product engineering, designing systems and
+            building software that solves real problems. In my spare time I enjoy the outdoors, 
+            frineds and family, and working out!
           </p>
         </div>
       </section>
