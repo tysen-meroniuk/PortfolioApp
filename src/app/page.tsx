@@ -33,12 +33,6 @@ export default function Home() {
           >
             View Projects
           </Link>
-          <a
-            href="mailto:tysen@example.com"
-            className="inline-flex h-11 items-center rounded-full border border-border px-6 text-sm font-medium text-foreground transition-colors hover:bg-foreground/5"
-          >
-            Get in Touch
-          </a>
         </div>
       </section>
 

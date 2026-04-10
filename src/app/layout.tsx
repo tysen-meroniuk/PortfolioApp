@@ -32,10 +32,23 @@ export default function RootLayout({
         <Navbar />
         <main className="flex-1">{children}</main>
         <footer className="border-t border-border/50 py-8">
-          <div className="mx-auto max-w-3xl px-6">
+          <div className="mx-auto flex max-w-3xl items-center justify-between px-6">
             <p className="text-sm text-muted">
               &copy; {new Date().getFullYear()} Tysen Meroniuk
             </p>
+            <div className="flex items-center gap-6">
+              <span className="text-sm text-muted">
+                tysenmeroniuk@gmail.com
+              </span>
+              <a
+                href="https://www.linkedin.com/in/tysen-meroniuk-b4ab1b327/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm text-muted transition-opacity hover:opacity-70"
+              >
+                LinkedIn
+              </a>
+            </div>
           </div>
         </footer>
       </body>
